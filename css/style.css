@@ -20,7 +20,7 @@ body{
 }
 header{
     background-color: white;
-    box-shadow: 2px 6px 10px rgba(0, 0 , 0, 0, 05);
+    box-shadow: 2px 6px 10px rgba(0, 0 , 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -34,4 +34,115 @@ header div a {
     font-size: 2,2rem;
     font-weight: bold;
     color: var(--violet-doux);
+}
+Ul li {
+
+    list-style: none;
+    margin-left: 15px;
+
+}
+ul {
+    display: flex;
+}
+ul li a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+    font-size: 1.1rem;
+    Position: relative;
+    padding: 10px 0;
+}
+Ul li a:hover {
+    color: var(--violet-doux);
+}
+ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    height: 3px;
+    background-color: var(--violet-doux);
+    transition: width 0.3s ease;
+}
+ul li a:hover::after {
+    width: 100%;
+}
+a.active {
+    color: var(--violet-doux);
+}
+a.active::after {
+    width: 100%;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
+    margin: 10rem 2rem;
+}
+.hero-section img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--violet-doux);
+
+}
+.hero-section h1{
+    color: var(--violet-doux);
+    font-size : 4rem;
+    font-weight : 700;
+    margin-bottom: 1.2rem;
+
+
+}
+.hero-section P {
+    color: var(--gris-tres-fonce);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+.hero-section a {
+    text-decoration: none;
+    font-display: inline-block;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+.hero-section a :hover{
+    background-color: var(--violet-fonce);
+    transform: translate(-3px);
+}
+.apropos {
+    width: 800px;
+    margin: 6rem auto;
+    text-align: center;
+}
+section h2{
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+.apropos p {
+    margin-bottom: 2rem;
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
 }
